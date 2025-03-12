@@ -27,6 +27,8 @@ class ReadCharactersIncr {
     }
 
     static void copyArray(byte[] src, int srcPos, byte[] dest, int destPos, int length) {
-        System.arraycopy(src, srcPos, dest, destPos, length);
+        for (int i = 0; i < length; i++) {
+            dest[destPos + i] = src[srcPos + i];
+        }
     }
 }
